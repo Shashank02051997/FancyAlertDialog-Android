@@ -3,7 +3,6 @@
 [![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg?style=plastic)](https://android-arsenal.com/api?level=19)
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg?style=flat-square)](https://www.apache.org/licenses/LICENSE-2.0.html)
 [![](https://jitpack.io/v/Shashank02051997/FancyToast-Android.svg)](https://jitpack.io/#Shashank02051997/FancyToast-Android)
-[![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-FancyToast-green.svg?style=flat )]( https://android-arsenal.com/details/1/6357 )
 ## Prerequisites
 
 Add this in your root `build.gradle` file (**not** your module `build.gradle` file):
@@ -32,27 +31,46 @@ dependencies {
 <h2> Fancy Alert Dialog</h2>
 
 ```diff
-+ new EasyCustomDialog.Builder(this,"Exit!")
-                .setSubTitle("Are you Sure?")
-                //.setHeader("Hello Guest")
-                //.setIcon(getResources().getDrawable(R.drawable.ic_error_outline_black_24dp))
-                //.setIcon(ContextCompat.getDrawable(this, R.drawable.animlogo))
-                .setPositiveBtnText("Yes")
-                .setNegativeBtnText("No")
-                .onConfirm(new EasyCustomDialogListener() {
+new FancyAlertDialog.Builder(this)
+                .setTitle("Rate us if you like the app")
+                .setBackgroundColor(Color.parseColor("#303F9F"))
+                .setMessage("Do you really want to Exit ?")
+                .setNegativeBtnText("Cancel")
+                .setPositiveBtnBackground(Color.parseColor("#FF4081"))
+                .setPositiveBtnText("Rate")
+                .setNegativeBtnBackground(Color.parseColor("#FFA9A7A8"))
+                .setAnimation(Animation.POP)
+                .isCancellable(true)
+                .setIcon(R.drawable.ic_star_border_black_24dp,Icon.Visible)
+                .OnPositiveClicked(new FancyAlertDialogListener() {
                     @Override
-                    public void execute() {
-                        Toast.makeText(getApplicationContext(),"Ok",Toast.LENGTH_LONG).show();
+                    public void OnClick() {
+                        Toast.makeText(MainActivity.this,"Rate",Toast.LENGTH_SHORT).show();
                     }
                 })
-                .onCancel(new EasyCustomDialogListener() {
+                .OnNegativeClicked(new FancyAlertDialogListener() {
                     @Override
-                    public void execute() {
-                        Toast.makeText(getApplicationContext(),"Cancel",Toast.LENGTH_LONG).show();
+                    public void OnClick() {
+                        Toast.makeText(MainActivity.this,"Cancel",Toast.LENGTH_SHORT).show();
                     }
                 })
                 .build();
 ```
+#### Animation
+
+There are 3 type of pre-defined animation you can use : `POP`, `SLIDE` and `SIDE`
+
+##### Pop Animation
+
+You can add this animation to your dialog by using `.setAnimation(Animation.POP)`
+
+##### Side Animation
+
+This animation let dialog enter screen from left and exit from right. You can add this animation to your dialog by using `.setAnimation(Animation.SIDE)`
+
+##### Slide Animation
+
+This animation let dialog enter screen from bottom and exit from bottom. You can add this animation to your dialog by using `.setAnimation(Animation.SLIDE)`
 
 ## Contributing
 
