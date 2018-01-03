@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="PopTheme" parent="@android:style/Theme.DeviceDefault.Light.Dialog">
+        <item name="android:windowAnimationStyle">@style/PopTheme1</item>
+    </style>
+
+    <style name="PopTheme1">
+        <item name="android:windowEnterAnimation">@anim/pop_in</item>
+        <item name="android:windowExitAnimation">@anim/pop_out</item>
+    </style>
+
+    <style name="SideTheme" parent="@android:style/Theme.DeviceDefault.Light.Dialog">
+        <item name="android:windowAnimationStyle">@style/SideTheme1</item>
+    </style>
+
+    <style name="SideTheme1">
+        <item name="android:windowEnterAnimation">@anim/side_in</item>
+        <item name="android:windowExitAnimation">@anim/side_out</item>
+    </style>
+
+    <style name="SlideTheme" parent="@android:style/Theme.DeviceDefault.Light.Dialog">
+        <item name="android:windowAnimationStyle">@style/SlideTheme1</item>
+    </style>
+
+    <style name="SlideTheme1">
+        <item name="android:windowEnterAnimation">@anim/slide_in</item>
+        <item name="android:windowExitAnimation">@anim/slide_out</item>
+    </style>
+
+</resources>
