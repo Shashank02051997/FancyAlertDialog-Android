@@ -43,13 +43,13 @@ new FancyAlertDialog.Builder(this)
                 .OnPositiveClicked(new FancyAlertDialogListener() {
                     @Override
                     public void OnClick() {
-                        Toast.makeText(MainActivity.this,"Rate",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Rate",Toast.LENGTH_SHORT).show();
                     }
                 })
                 .OnNegativeClicked(new FancyAlertDialogListener() {
                     @Override
                     public void OnClick() {
-                        Toast.makeText(MainActivity.this,"Cancel",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Cancel",Toast.LENGTH_SHORT).show();
                     }
                 })
                 .build();
