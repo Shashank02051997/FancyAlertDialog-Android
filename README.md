@@ -26,8 +26,6 @@ dependencies {
 	compile 'com.github.Shashank02051997:FancyAlertDialog-Android:0.1'
 }
 ```
-## Usage
-
 <h2> Fancy Alert Dialog</h2>
 
 ```diff
