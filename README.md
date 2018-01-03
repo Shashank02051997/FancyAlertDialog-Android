@@ -70,6 +70,14 @@ This animation let dialog enter screen from left and exit from right. You can ad
 
 This animation let dialog enter screen from bottom and exit from bottom. You can add this animation to your dialog by using `.setAnimation(Animation.SLIDE)`
 
+## Screenshots
+
+**Please click the image below to enlarge.**
+
+
+<img src="https://github.com/Shashank02051997/FancyAlertDialog-Android/blob/master/fancydialogimg.png">
+
+
 ## Contributing
 
 Please fork this repository and contribute back using
