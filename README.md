@@ -24,65 +24,40 @@ Add this to your module's `build.gradle` file (make sure the version matches the
 ```gradle
 dependencies {
 	...
-	compile 'com.github.Shashank02051997:FancyToast-Android:0.1.3'
+	compile 'com.github.Shashank02051997:FancyAlertDialog-Android:0.1'
 }
 ```
 ## Usage
 
-Each method always returns a `Toast` object, so you can customize the Toast much more. **DON'T FORGET THE `show()` METHOD!**
+<h2> Fancy Alert Dialog</h2>
 
-To display an default Toast:
-
-``` java
-FancyToast.makeText(this,"Hello World !",FancyToast.LENGTH_LONG,FancyToast.DEFAULT,true);
+```diff
++ new EasyCustomDialog.Builder(this,"Exit!")
+                .setSubTitle("Are you Sure?")
+                //.setHeader("Hello Guest")
+                //.setIcon(getResources().getDrawable(R.drawable.ic_error_outline_black_24dp))
+                //.setIcon(ContextCompat.getDrawable(this, R.drawable.animlogo))
+                .setPositiveBtnText("Yes")
+                .setNegativeBtnText("No")
+                .onConfirm(new EasyCustomDialogListener() {
+                    @Override
+                    public void execute() {
+                        Toast.makeText(getApplicationContext(),"Ok",Toast.LENGTH_LONG).show();
+                    }
+                })
+                .onCancel(new EasyCustomDialogListener() {
+                    @Override
+                    public void execute() {
+                        Toast.makeText(getApplicationContext(),"Cancel",Toast.LENGTH_LONG).show();
+                    }
+                })
+                .build();
 ```
-To display a success Toast:
-
-``` java
-FancyToast.makeText(this,"Hello World !",FancyToast.LENGTH_LONG,FancyToast.SUCCESS,true);
-```
-To display an info Toast:
-
-``` java
-FancyToast.makeText(this,"Hello World !",FancyToast.LENGTH_LONG,FancyToast.INFO,true);
-```
-To display a warning Toast:
-
-``` java
-FancyToast.makeText(this,"Hello World !",FancyToast.LENGTH_LONG,FancyToast.WARNING,true);
-```
-To display the error Toast:
-
-``` java
-FancyToast.makeText(this,"Hello World !",FancyToast.LENGTH_LONG,FancyToast.ERROR,true);
-```
-To display the confusing Toast:
-
-``` java
-FancyToast.makeText(this,"Hello World !",FancyToast.LENGTH_LONG,FancyToast.CONFUSING,true);
-```
-You can also remove the android icon on top-right corner by passing last parameter false.
-``` java
-FancyToast.makeText(yourContext, "I'm a Toast", duration, type, boolen value).show();
-```
-
-You can also create your custom Toasts with passing your image:
-``` java
-FancyToast.makeText(yourContext, "I'm a custom Toast", duration, type, yourimage).show();
-```
-
-## Screenshots
-
-**Please click the image below to enlarge.**
-
-
-<img src="https://github.com/Shashank02051997/FancyToast-Android/blob/master/fancytoastcollage.png">
-
 
 ## Contributing
 
 Please fork this repository and contribute back using
-[pull requests](https://github.com/Shashank02051997/FancyToast-Android/pulls).
+[pull requests](https://github.com/Shashank02051997/FancyDialog-Android/pulls).
 
 Any contributions, large or small, major features, bug fixes, are welcomed and appreciated
 but will be thoroughly reviewed .
