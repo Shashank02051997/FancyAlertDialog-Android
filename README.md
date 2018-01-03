@@ -2,7 +2,7 @@
 [![platform](https://img.shields.io/badge/platform-Android-yellow.svg)](https://www.android.com)
 [![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg?style=plastic)](https://android-arsenal.com/api?level=19)
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg?style=flat-square)](https://www.apache.org/licenses/LICENSE-2.0.html)
-[![](https://jitpack.io/v/Shashank02051997/FancyToast-Android.svg)](https://jitpack.io/#Shashank02051997/FancyToast-Android)
+[![](https://jitpack.io/v/Shashank02051997/FancyDialog-Android.svg)](https://jitpack.io/#Shashank02051997/FancyDialog-Android)
 ## Prerequisites
 
 Add this in your root `build.gradle` file (**not** your module `build.gradle` file):
@@ -33,12 +33,12 @@ dependencies {
 ```diff
 new FancyAlertDialog.Builder(this)
                 .setTitle("Rate us if you like the app")
-                .setBackgroundColor(Color.parseColor("#303F9F"))
+                .setBackgroundColor(Color.parseColor("#303F9F"))  //Don't pass R.color.colorvalue
                 .setMessage("Do you really want to Exit ?")
                 .setNegativeBtnText("Cancel")
-                .setPositiveBtnBackground(Color.parseColor("#FF4081"))
+                .setPositiveBtnBackground(Color.parseColor("#FF4081"))  //Don't pass R.color.colorvalue
                 .setPositiveBtnText("Rate")
-                .setNegativeBtnBackground(Color.parseColor("#FFA9A7A8"))
+                .setNegativeBtnBackground(Color.parseColor("#FFA9A7A8"))  //Don't pass R.color.colorvalue
                 .setAnimation(Animation.POP)
                 .isCancellable(true)
                 .setIcon(R.drawable.ic_star_border_black_24dp,Icon.Visible)
