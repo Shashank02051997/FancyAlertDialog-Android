@@ -82,7 +82,7 @@ This animation let dialog enter screen from bottom and exit from bottom. You can
 ## Contributing
 
 Please fork this repository and contribute back using
-[pull requests](https://github.com/Shashank02051997/FancyDialog-Android/pulls).
+[pull requests](https://github.com/Shashank02051997/FancyAlertDialog-Android/pulls).
 
 Any contributions, large or small, major features, bug fixes, are welcomed and appreciated
 but will be thoroughly reviewed .
