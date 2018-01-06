@@ -13,7 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
- * Created by Ankit Dubey on 22/11/2017.
+ * Created by Shashank Singhal on 03/01/2018.
  */
 
 public class FancyAlertDialog {
