@@ -9,11 +9,9 @@
         android:pivotX="50%"
         android:pivotY="-90%"
         android:toXScale="0.0"
-        android:toYScale="0.0"
-        />
+        android:toYScale="0.0" />
     <translate
         android:duration="200"
         android:fromYDelta="0"
-        android:toYDelta="50%"
-        />
+        android:toYDelta="50%" />
 </set>

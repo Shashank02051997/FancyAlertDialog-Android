@@ -5,5 +5,5 @@ package com.shashank.sony.fancydialoglib;
  */
 
 public enum Animation {
-    POP,SIDE,SLIDE
+    POP, SIDE, SLIDE
 }

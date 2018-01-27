@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="PopTheme" parent="@android:style/Theme.DeviceDefault.Light.Dialog">
         <item name="android:windowAnimationStyle">@style/PopTheme1</item>
     </style>
