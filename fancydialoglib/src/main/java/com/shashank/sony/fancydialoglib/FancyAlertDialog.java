@@ -50,6 +50,7 @@ public class FancyAlertDialog {
         this.nBtnColor = builder.nBtnColor;
         this.bgColor = builder.bgColor;
         this.cancel = builder.cancel;
+        this.dialog = builder.dialog;
     }
 
     public FancyAlertDialog show() {
