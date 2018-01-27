@@ -1,9 +1,9 @@
 # FancyAlertDialog-Android
 [![platform](https://img.shields.io/badge/platform-Android-yellow.svg)](https://www.android.com)
-[![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg?style=plastic)](https://android-arsenal.com/api?level=19)
+[![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg?style=plastic)](https://android-arsenal.com/api?level=15)
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg?style=flat-square)](https://www.apache.org/licenses/LICENSE-2.0.html)
 [![](https://jitpack.io/v/Shashank02051997/FancyAlertDialog-Android.svg)](https://jitpack.io/#Shashank02051997/FancyAlertDialog-Android)
-[![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-FancyAlertDialog-green.svg?style=flat )]( https://android-arsenal.com/details/1/6626 )
+[![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-FancyAlertDialog-green.svg?style=flat )]( https://android-arsenal.com/details/1/6626 ) [![Javadoc](https://img.shields.io/badge/javadoc-SNAPSHOT-green.svg)](https://jitpack.io/com/github/Shashank02051997/FancyAlertDialog-Android/master-SNAPSHOT/javadoc/index.html)
 ## Prerequisites
 
 Add this in your root `build.gradle` file (**not** your module `build.gradle` file):
@@ -87,7 +87,7 @@ Please fork this repository and contribute back using
 Any contributions, large or small, major features, bug fixes, are welcomed and appreciated
 but will be thoroughly reviewed .
 
-### Contact - Let's become friend
+### Contact - Let's become friends
 - [Twitter](https://twitter.com/shashank020597)
 - [Github](https://github.com/Shashank02051997)
 - [Linkedin](https://www.linkedin.com/in/shashank-singhal-a87729b5/)
