@@ -30,7 +30,8 @@ dependencies {
 <h2> Fancy Alert Dialog</h2>
 
 ```diff
-new FancyAlertDialog.Builder(this)
+ FancyAlertDialog.Builder
+                .with(this)
                 .setTitle("Rate us if you like the app")
                 .setBackgroundColor(Color.parseColor("#303F9F"))  //Don't pass R.color.colorvalue
                 .setMessage("Do you really want to Exit ?")
@@ -40,20 +41,11 @@ new FancyAlertDialog.Builder(this)
                 .setNegativeBtnBackground(Color.parseColor("#FFA9A7A8"))  //Don't pass R.color.colorvalue
                 .setAnimation(Animation.POP)
                 .isCancellable(true)
-                .setIcon(R.drawable.ic_star_border_black_24dp,Icon.Visible)
-                .OnPositiveClicked(new FancyAlertDialogListener() {
-                    @Override
-                    public void OnClick() {
-                        Toast.makeText(getApplicationContext(),"Rate",Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .OnNegativeClicked(new FancyAlertDialogListener() {
-                    @Override
-                    public void OnClick() {
-                        Toast.makeText(getApplicationContext(),"Cancel",Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .build();
+                .setIcon(R.drawable.ic_star_border_black_24dp, View.VISIBLE)
+                .onPositiveClicked(dialog -> Toast.makeText(MainActivity.this, "Rate", Toast.LENGTH_SHORT).show())
+                .onNegativeClicked(dialog -> Toast.makeText(MainActivity.this, "Cancel", Toast.LENGTH_SHORT).show())
+                .build()
+                .show();
 ```
 #### Animation
 
