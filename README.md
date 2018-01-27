@@ -33,12 +33,12 @@ dependencies {
  FancyAlertDialog.Builder
                 .with(this)
                 .setTitle("Rate us if you like the app")
-                .setBackgroundColor(Color.parseColor("#303F9F"))  //Don't pass R.color.colorvalue
+                .setBackgroundColor(Color.parseColor("#303F9F"))  // for @ColorRes use setBackgroundColorRes(R.color.colorvalue)
                 .setMessage("Do you really want to Exit ?")
                 .setNegativeBtnText("Cancel")
-                .setPositiveBtnBackground(Color.parseColor("#FF4081"))  //Don't pass R.color.colorvalue
+                .setPositiveBtnBackground(Color.parseColor("#FF4081"))  // for @ColorRes use setPositiveBtnBackgroundRes(R.color.colorvalue)
                 .setPositiveBtnText("Rate")
-                .setNegativeBtnBackground(Color.parseColor("#FFA9A7A8"))  //Don't pass R.color.colorvalue
+                .setNegativeBtnBackground(Color.parseColor("#FFA9A7A8"))  // for @ColorRes use setNegativeBtnBackgroundRes(R.color.colorvalue)
                 .setAnimation(Animation.POP)
                 .isCancellable(true)
                 .setIcon(R.drawable.ic_star_border_black_24dp, View.VISIBLE)

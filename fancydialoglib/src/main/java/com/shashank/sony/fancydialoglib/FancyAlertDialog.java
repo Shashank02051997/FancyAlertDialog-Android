@@ -101,6 +101,9 @@ public class FancyAlertDialog {
             this.bgColor = bgColor;
             return this;
         }
+        public Builder setBackgroundColorRes(@ColorRes int bgColor) {
+            return setBackgroundColor(context.get().getResources().getColor(bgColor));
+        }
 
         public Builder setMessage(String message) {
             this.message = message;
