@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.GradientDrawable;
 import android.support.annotation.ColorInt;
+import android.support.annotation.ColorRes;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -116,6 +117,10 @@ public class FancyAlertDialog {
             return this;
         }
 
+        public Builder setPositiveBtnBackgroundRes(@ColorRes int pBtnColor) {
+            return setPositiveBtnBackground(context.get().getResources().getColor(pBtnColor));
+        }
+
         public Builder setNegativeBtnText(String negativeBtnText) {
             this.negativeBtnText = negativeBtnText;
             return this;
@@ -126,6 +131,9 @@ public class FancyAlertDialog {
             return this;
         }
 
+        public Builder setNegativeBtnBackgroundRes(@ColorRes int nBtnColor) {
+            return setNegativeBtnBackground(context.get().getResources().getColor(nBtnColor));
+        }
 
         //setIcon
         public Builder setIcon(@DrawableRes int icon, @Visibility int visibility) {
