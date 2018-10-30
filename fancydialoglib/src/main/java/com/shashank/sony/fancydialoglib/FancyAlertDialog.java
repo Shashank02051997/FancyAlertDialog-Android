@@ -5,12 +5,14 @@ import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.GradientDrawable;
+import android.net.Uri;
 import android.view.View;
 import android.view.Window;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.VideoView;
 
 /**
  * Created by Shashank Singhal on 03/01/2018.
@@ -26,6 +28,8 @@ public class FancyAlertDialog {
     private FancyAlertDialogListener pListener,nListener;
     private int pBtnColor,nBtnColor,bgColor;
     private boolean cancel;
+    private String videopath;
+    private String imagetoshow;
 
 
 
@@ -44,6 +48,8 @@ public class FancyAlertDialog {
         this.nBtnColor=builder.nBtnColor;
         this.bgColor=builder.bgColor;
         this.cancel=builder.cancel;
+        this.videopath = builder.videopath;
+        this.imagetoshow = builder.imagetoshow;
     }
 
 
@@ -56,6 +62,25 @@ public class FancyAlertDialog {
         private FancyAlertDialogListener pListener,nListener;
         private int pBtnColor,nBtnColor,bgColor;
         private boolean cancel;
+
+        public String getVideopath() {
+            return videopath;
+        }
+
+        public void setVideopath(String videopath) {
+            this.videopath = videopath;
+        }
+
+        public String getImagetoshow() {
+            return imagetoshow;
+        }
+
+        public void setImagetoshow(String imagetoshow) {
+            this.imagetoshow = imagetoshow;
+        }
+
+        private String videopath;
+        private String imagetoshow;
 
         public Builder(Activity activity){
             this.activity=activity;
@@ -132,17 +157,38 @@ public class FancyAlertDialog {
             View view;
             final Dialog dialog;
             if(animation==Animation.POP)
-            dialog=new Dialog(activity,R.style.PopTheme);
+                dialog=new Dialog(activity,R.style.PopTheme);
             else if(animation==Animation.SIDE)
-            dialog=new Dialog(activity,R.style.SideTheme);
+                dialog=new Dialog(activity,R.style.SideTheme);
             else if(animation==Animation.SLIDE)
-            dialog=new Dialog(activity,R.style.SlideTheme);
+                dialog=new Dialog(activity,R.style.SlideTheme);
             else
-            dialog=new Dialog(activity);
+                dialog=new Dialog(activity);
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
             dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
             dialog.setCancelable(cancel);
             dialog.setContentView(R.layout.fancyalertdialog);
+            /////////////////////////////////////////////////////////////////////////////////////
+            VideoView videoview = (VideoView) dialog.findViewById(R.id.videoView);
+
+            if(videopath!=null) {
+                videoview.setVisibility(View.VISIBLE);
+//                String path = "android.resource://" + activity.getPackageName() + "/" + R.raw.pregnantfood;
+                videoview.setVideoURI(Uri.parse(videopath));
+                videoview.start();
+            }else{
+                videoview.setVisibility(View.GONE);
+            }
+
+            ImageView imageView = (ImageView)dialog.findViewById(R.id.imageView);
+            if(imagetoshow!=null){
+                imageView.setVisibility(View.VISIBLE);
+                Uri imgUri=Uri.parse(imagetoshow);
+                imageView.setImageURI(null);
+                imageView.setImageURI(imgUri);
+            }else{
+                imageView.setVisibility(View.GONE);
+            }
 
             //getting resources
             view=(View)dialog.findViewById(R.id.background);
@@ -154,24 +200,24 @@ public class FancyAlertDialog {
             title1.setText(title);
             message1.setText(message);
             if(positiveBtnText!=null)
-            pBtn.setText(positiveBtnText);
+                pBtn.setText(positiveBtnText);
             if(pBtnColor!=0)
             { GradientDrawable bgShape = (GradientDrawable)pBtn.getBackground();
-              bgShape.setColor(pBtnColor);
+                bgShape.setColor(pBtnColor);
             }
             if(nBtnColor!=0)
             { GradientDrawable bgShape = (GradientDrawable)nBtn.getBackground();
-              bgShape.setColor(nBtnColor);
+                bgShape.setColor(nBtnColor);
             }
             if(negativeBtnText!=null)
-            nBtn.setText(negativeBtnText);
+                nBtn.setText(negativeBtnText);
             iconImg.setImageResource(icon);
             if(visibility==Icon.Visible)
-            iconImg.setVisibility(View.VISIBLE);
+                iconImg.setVisibility(View.VISIBLE);
             else
-            iconImg.setVisibility(View.GONE);
+                iconImg.setVisibility(View.GONE);
             if(bgColor!=0)
-            view.setBackgroundColor(bgColor);
+                view.setBackgroundColor(bgColor);
             if(pListener!=null) {
                 pBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
