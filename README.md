@@ -1,9 +1,9 @@
 # FancyAlertDialog-Android
 [![platform](https://img.shields.io/badge/platform-Android-yellow.svg)](https://www.android.com)
-[![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg?style=plastic)](https://android-arsenal.com/api?level=19)
+[![API](https://img.shields.io/badge/API-15%2B-brightgreen.svg?style=plastic)](https://android-arsenal.com/api?level=15)
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg?style=flat-square)](https://www.apache.org/licenses/LICENSE-2.0.html)
 [![](https://jitpack.io/v/Shashank02051997/FancyAlertDialog-Android.svg)](https://jitpack.io/#Shashank02051997/FancyAlertDialog-Android)
-[![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-FancyAlertDialog-green.svg?style=flat )]( https://android-arsenal.com/details/1/6626 )
+[![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-FancyAlertDialog-green.svg?style=flat )]( https://android-arsenal.com/details/1/6626 ) [![Javadoc](https://img.shields.io/badge/javadoc-SNAPSHOT-green.svg)](https://jitpack.io/com/github/Shashank02051997/FancyAlertDialog-Android/master-SNAPSHOT/javadoc/index.html)
 
 <a href="https://play.google.com/store/apps/details?id=com.shashank.sony.fancylibrarybyshashank">
     <img alt="Get it on Google Play"
@@ -37,30 +37,22 @@ dependencies {
 <h2> Fancy Alert Dialog</h2>
 
 ```diff
-new FancyAlertDialog.Builder(this)
+ FancyAlertDialog.Builder
+                .with(this)
                 .setTitle("Rate us if you like the app")
-                .setBackgroundColor(Color.parseColor("#303F9F"))  //Don't pass R.color.colorvalue
+                .setBackgroundColor(Color.parseColor("#303F9F"))  // for @ColorRes use setBackgroundColorRes(R.color.colorvalue)
                 .setMessage("Do you really want to Exit ?")
                 .setNegativeBtnText("Cancel")
-                .setPositiveBtnBackground(Color.parseColor("#FF4081"))  //Don't pass R.color.colorvalue
+                .setPositiveBtnBackground(Color.parseColor("#FF4081"))  // for @ColorRes use setPositiveBtnBackgroundRes(R.color.colorvalue)
                 .setPositiveBtnText("Rate")
-                .setNegativeBtnBackground(Color.parseColor("#FFA9A7A8"))  //Don't pass R.color.colorvalue
+                .setNegativeBtnBackground(Color.parseColor("#FFA9A7A8"))  // for @ColorRes use setNegativeBtnBackgroundRes(R.color.colorvalue)
                 .setAnimation(Animation.POP)
                 .isCancellable(true)
-                .setIcon(R.drawable.ic_star_border_black_24dp,Icon.Visible)
-                .OnPositiveClicked(new FancyAlertDialogListener() {
-                    @Override
-                    public void OnClick() {
-                        Toast.makeText(getApplicationContext(),"Rate",Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .OnNegativeClicked(new FancyAlertDialogListener() {
-                    @Override
-                    public void OnClick() {
-                        Toast.makeText(getApplicationContext(),"Cancel",Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .build();
+                .setIcon(R.drawable.ic_star_border_black_24dp, View.VISIBLE)
+                .onPositiveClicked(dialog -> Toast.makeText(MainActivity.this, "Rate", Toast.LENGTH_SHORT).show())
+                .onNegativeClicked(dialog -> Toast.makeText(MainActivity.this, "Cancel", Toast.LENGTH_SHORT).show())
+                .build()
+                .show();
 ```
 #### Animation
 
@@ -94,14 +86,14 @@ Please fork this repository and contribute back using
 Any contributions, large or small, major features, bug fixes, are welcomed and appreciated
 but will be thoroughly reviewed .
 
-### Contact - Let's become friend
+### Contact - Let's become friends
 - [Twitter](https://twitter.com/shashank020597)
 - [Github](https://github.com/Shashank02051997)
 - [Linkedin](https://www.linkedin.com/in/shashank-singhal-a87729b5/)
 - [Facebook](https://www.facebook.com/shashanksinghal02)
 
 ## Donation
-If this project help you reduce time to develop, you can give me a cup of coffee :) 
+If this project help you reduce time to develop, you can give me a cup of coffee :)
 
 <a href="https://www.buymeacoffee.com/mXUuDW7" target="_blank"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 
