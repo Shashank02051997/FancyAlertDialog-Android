@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/FancyDialogLibrary.iml" filepath="$PROJECT_DIR$/FancyDialogLibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/fancydialoglib/fancydialoglib.iml" filepath="$PROJECT_DIR$/fancydialoglib/fancydialoglib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FancyAlertDialog-Android.iml" filepath="$PROJECT_DIR$/.idea/modules/FancyAlertDialog-Android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/FancyAlertDialog-Android.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/FancyAlertDialog-Android.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fancydialoglib/FancyAlertDialog-Android.fancydialoglib.iml" filepath="$PROJECT_DIR$/.idea/modules/fancydialoglib/FancyAlertDialog-Android.fancydialoglib.iml" />
     </modules>
   </component>
 </project>
